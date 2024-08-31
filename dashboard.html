@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard">
+        <header>
+            <div class="logo">Your Logo</div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Budget</a></li>
+                    <li><a href="#">Tansaction</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                </ul>
+            </nav>
+            <div class="user-info">
+                <span>Welcome, User!</span>
+                <button class="logout-btn">Logout</button>
+            </div>
+        </header>
+        
+        <main>
+            <section class="overview">
+                <h2>Overview</h2>
+                <div class="metrics">
+                    <div class="metric">
+                        <h3>Total Balance</h3>
+                        <p>$5,000</p>
+                    </div>
+                    <div class="metric">
+                        <h3>Monthly Expenses</h3>
+                        <p>$1,200</p>
+                    </div>
+                    <div class="metric">
+                        <h3>Pending Transactions</h3>
+                        <p>3</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="notifications">
+                <h2>Alerts</h2>
+                <ul>
+                    <li>You have a pending payment due in 3 days.</li>
+                    <li>Your last transaction was successful.</li>
+                    <li>New features have been added! Check them out!</li>
+                </ul>
+            </section>
+
+            <section class="analytics">
+                <h2>Your Analytics</h2>
+                <canvas id="analyticsChart"></canvas>
+            </section>
+
+            <section class="recent-activities">
+                <h2>Recent Transactions</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Description</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2024-08-15</td>
+                            <td>Payment Received</td>
+                            <td>$300</td>
+                        </tr>
+                        <tr>
+                            <td>2024-08-12</td>
+                            <td>Grocery Shopping</td>
+                            <td>-$150</td>
+                        </tr>
+                        <tr>
+                            <td>2024-08-10</td>
+                            <td>Salary Credit</td>
+                            <td>$2000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="actions">
+                <h2>Quick Actions</h2>
+                <button class="action-btn">Add Transaction</button>
+                <button class="action-btn">Set Budget</button>
+                <button class="action-btn">View Reports</button>
+            </section>
+
+            <section class="resources">
+                <h2>Resources</h2>
+                <ul>
+                    <li><a href="#">How to Save Money</a></li>
+                    <li><a href="#">Budgeting Tips</a></li>
+                    <li><a href="#">Investment Strategies</a></li>
+                </ul>
+            </section>
+
+            <section class="goals">
+                <h2>Your Goals</h2>
+                <div class="goal">
+                    <h3>Save for Vacation</h3>
+                    <progress value="60" max="100"></progress>
+                    <p>Current Progress: 60%</p>
+                </div>
+                <div class="goal">
+                    <h3>Emergency Fund</h3>
+                    <progress value="30" max="100"></progress>
+                    <p>Current Progress: 30%</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Your Company. All rights reserved.</p>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Sample analytics chart
+        const ctx = document.getElementById('analyticsChart').getContext('2d');
+        const analyticsChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                datasets: [{
+                    label: 'Monthly Expenses',
+                    data: [1200, 800, 1000, 1400, 700, 900],
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 2,
+                    fill: false,
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

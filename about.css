@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Soft background color */
+}
+
+header {
+    background: #007bff; /* Header background color */
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+h1 {
+    margin: 20px 0;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.intro, .mission, .team, .core-values {
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #007bff; /* Section headings color */
+    margin-bottom: 15px;
+}
+
+.team {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    gap: 20px; /* Add spacing between team members */
+}
+
+
+.team-member {
+    background: #f8f9fa; /* Light background for team members */
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    flex: 1 1 calc(30% - 20px); /* Flex basis with space for gaps */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center-align text */
+}
+
+.team-member img {
+    width: 100px; /* Fixed width for images */
+    height: 100px; /* Fixed height for images */
+    border-radius: 50%; /* Circular images for team members */
+    object-fit: cover; /* Cover to maintain aspect ratio */
+}
+
+
+.core-values {
+    background: #e9ecef; /* Subtle background for core values */
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.core-values .value {
+    background: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.core-values .value:hover {
+    background: #d4d4d4; /* Hover effect for core values */
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #007bff; /* Footer background */
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}

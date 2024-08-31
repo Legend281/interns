@@ -1,0 +1,476 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #007BFF;
+    padding: 10px;
+}
+
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.nav-list li {
+    margin: 10px 0;
+}
+
+.nav-list li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.nav-list li a:hover {
+    background-color: #5a6ac5;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .nav-list {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .nav-list li {
+        margin: 0;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    nav {
+        padding: 20px;
+    }
+
+    .nav-list {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .nav-list li {
+        margin: 0 15px;
+    }
+
+    .nav-list li a {
+        font-size: 20px;
+    }
+}
+
+
+.hero {
+    background: url('images/B2B-Financial-Planning-edited-1536x864.jpeg') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    padding: 0 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 37px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000066;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #5a6ac5;
+}
+
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 40px 20px;
+    background-color: #638da5a2;
+}
+
+.feature {
+    flex: 1 1 calc(33.333% - 20px); /* Adjusts the width for 3 columns */
+    margin: 40px;
+    text-align: center;
+    max-width: 300px;
+    box-sizing: border-box;
+}
+
+.feature i {
+    font-size: 48px; /* Adjust icon size */
+    color: #007BFF; /* Icon color */
+    margin-bottom: 10px;
+}
+
+.feature h3 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.feature p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.feature a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.feature a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .feature {
+        flex: 1 1 calc(50% - 20px); /* 2 columns on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .feature {
+        flex: 1 1 100%; /* 1 column on small screens */
+    }
+}
+
+
+
+.testimonials {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center; /* Center align heading */
+}
+
+.testimonials h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #007BFF; /* Optional: Change the color to match your theme */
+}
+
+.testimonial-container {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: row; /* Arrange testimonials in a row */
+    justify-content: center; /* Center the testimonials */
+    flex-wrap: wrap; /* Wrap testimonials on smaller screens */
+    gap: 20px; 
+}
+
+.testimonial {
+    background-color: white; /* White background for testimonials */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Inner spacing */
+    max-width: 350px; /* Limit width for consistency */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    display: flex; /* Flexbox for inner layout */
+    align-items: center; /* Align items vertically */
+}
+
+.testimonial-image {
+    width: 60px; /* Set image width */
+    height: 60px; /* Set image height */
+    border-radius: 50%; /* Make the image circular */
+    margin-right: 15px; /* Space between image and text */
+}
+
+.testimonial blockquote {
+    margin: 0; /* Reset margin for blockquote */
+    font-style: italic; /* Italic style for quote */
+    flex: 1; /* Allow blockquote to take available space */
+}
+
+.testimonial footer {
+    text-align: right; /* Right align the footer */
+    font-weight: bold; /* Make the author's name bold */
+    margin-top: 10px; /* Space above the footer */
+    color: #555; /* Optional: Change the color to a darker gray */
+}
+
+
+
+
+
+.cta {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #007BFF;
+    color: #ffffff;
+}
+
+.cta h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.cta .btn-primary {
+    background-color: #ffffff;
+    color: #007BFF;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.cta .btn-primary:hover {
+    background-color: #f0f0f0; 
+    
+}
+
+
+
+.blog {
+    padding: 40px 20px;
+    background-color: #ffffff;
+}
+
+.blog h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #007BFF; /* Optional: Change color to match your theme */
+}
+
+.blog-container {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center; /* Center align cards */
+    gap: 20px; /* Space between cards */
+}
+
+.blog-card {
+    background-color: #f9f9f9; /* Card background */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    max-width: 300px; /* Card width */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    overflow: hidden; /* Ensure content doesn't overflow */
+    transition: transform 0.3s ease; /* Animation on hover */
+}
+
+.blog-card:hover {
+    transform: scale(1.05); /* Scale up card on hover */
+}
+
+.blog-image {
+    width: 100%; /* Full width image */
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Cover the area without distortion */
+}
+
+.blog-content {
+    padding: 20px; /* Inner spacing */
+}
+
+.blog-content h3 {
+    font-size: 20px; /* Title size */
+    margin-bottom: 10px; /* Space below title */
+}
+
+.blog-content h3 a {
+    color: #007BFF; /* Title link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.blog-content h3 a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.blog-content p {
+    font-size: 16px; /* Description text size */
+    margin-bottom: 15px; /* Space below description */
+}
+
+.btn-read-more {
+    background-color: #007BFF; /* Button color */
+    color: #ffffff; /* Button text color */
+    padding: 10px 15px; /* Button padding */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.btn-read-more:hover {
+    background-color: #0056b3; /* Darker color on hover */
+}
+
+
+
+
+.contact {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+.contact h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.contact input, .contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.contact button {
+    background-color: #007BFF;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+.faqs {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+.faqs h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #007BFF; /* Optional: Change color to match your theme */
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd; /* Add a border between items */
+}
+
+.faq-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer; /* Change cursor to pointer on hover */
+    padding: 15px; /* Inner padding */
+    background-color: #f1f1f1; /* Background color for header */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.faq-header:hover {
+    background-color: #e0e0e0; /* Change background on hover */
+}
+
+.faq-icon {
+    font-size: 24px; /* Icon size */
+    color: #007BFF; /* Icon color */
+    margin-right: 10px; /* Space between icon and text */
+}
+
+.faq-arrow {
+    font-size: 16px; /* Arrow size */
+    transition: transform 0.3s; /* Smooth arrow rotation */
+}
+
+.faq-content {
+    display: none; /* Hide content initially */
+    padding: 15px; /* Inner padding */
+    background-color: #ffffff; /* Background for content */
+    border-radius: 5px; /* Rounded corners */
+    margin-top: 5px; /* Space above content */
+}
+
+.faq-content p {
+    margin: 0; /* Remove margin for paragraph */
+    font-size: 16px; /* Font size for answers */
+}
+
+
+
+
+footer {
+    background-color: #007BFF;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-links {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-links li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.social-media {
+    margin-top: 10px;
+}
+
+.social-media a {
+    color: #ffffff;
+    margin: 0 10px;
+}
